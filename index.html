@@ -1,0 +1,224 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Google Font Icons -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Gmail Clone</title>
+  </head>
+  <body>
+    <div class="modal active" id="modal2">
+      <div class="header">
+        <div class="title">Please Enter The Passcode</div>
+        <button class="btn close-modal">&times;</button>
+      </div>
+      <div class="body">
+       <input type="number" id="pass">
+       <button id="passsubmit">Submit</button>
+      </div>
+    </div>
+    
+    <div id="overlay" class="active"></div>
+    <!-- Header Starts -->
+    <div class="header">
+      <div class="header__left">
+        <span class="material-icons"> menu </span>
+        <img
+          src="https://i.pinimg.com/originals/ae/47/fa/ae47fa9a8fd263aa364018517020552d.png"
+          alt=""
+        />
+      </div>
+
+      <div class="header__middle">
+        <span class="material-icons"> search </span>
+        <input type="text" placeholder="Search mail" />
+        <span class="material-icons"> arrow_drop_down </span>
+      </div>
+
+      <div class="header__right">
+        <span class="material-icons"> apps </span>
+        <span class="material-icons"> notifications </span>
+        <span class="material-icons"> account_circle </span>
+      </div>
+    </div>
+    <!-- Header Ends -->
+
+    <!-- Main Body Starts -->
+    <div class="main__body">
+      <!-- Sidebar Starts -->
+      <div class="sidebar">
+        <button class="sidebar__compose"><span class="material-icons"> add </span>Compose</button>
+        <div class="sidebarOption sidebarOption__active">
+          <span class="material-icons"> inbox </span>
+          <h3>Inbox</h3>
+        </div>
+
+        <div class="sidebarOption">
+          <span class="material-icons"> star </span>
+          <h3>Starred</h3>
+        </div>
+
+        <div class="sidebarOption">
+          <span class="material-icons"> access_time </span>
+          <h3>Snoozed</h3>
+        </div>
+
+        <div class="sidebarOption">
+          <span class="material-icons"> label_important </span>
+          <h3>Important</h3>
+        </div>
+
+        <div class="sidebarOption">
+          <span class="material-icons"> near_me </span>
+          <h3>Sent</h3>
+        </div>
+
+        <div class="sidebarOption">
+          <span class="material-icons"> note </span>
+          <h3>Drafts</h3>
+        </div>
+
+        <div class="sidebarOption">
+          <span class="material-icons"> expand_more </span>
+          <h3>More</h3>
+        </div>
+
+        <div class="sidebar__footer">
+          <div class="sidebar__footerIcons">
+            <span class="material-icons"> person </span>
+            <span class="material-icons"> duo </span>
+            <span class="material-icons"> phone </span>
+          </div>
+        </div>
+      </div>
+      <!-- Sidebar Ends -->
+
+      <!-- Email List Starts -->
+      <div class="emailList" >
+        <div class="emailses" >
+        <!-- Settings Starts -->
+        <div class="emailList__settings">
+          <div class="emailList__settingsLeft">
+            <input type="checkbox" />
+            <span class="material-icons"> arrow_drop_down </span>
+            <span class="material-icons"> redo </span>
+            <span class="material-icons"> more_vert </span>
+          </div>
+          <div class="emailList__settingsRight">
+            <span class="material-icons"> chevron_left </span>
+            <span class="material-icons"> chevron_right </span>
+            <span class="material-icons"> keyboard_hide </span>
+            <span class="material-icons"> settings </span>
+          </div>
+        </div>
+        <!-- Settings Ends -->
+
+        <!-- Section Starts -->
+        <div class="emailList__sections">
+          <div class="section section__selected">
+            <span class="material-icons"> inbox </span>
+            <h4>Primary</h4>
+          </div>
+
+          <div class="section">
+            <span class="material-icons"> people </span>
+            <h4>Social</h4>
+          </div>
+
+          <div class="section">
+            <span class="material-icons"> local_offer </span>
+            <h4>Promotions</h4>
+          </div>
+        </div>
+        <!-- Section Ends -->
+
+        <!-- Email List rows starts -->
+        <div class="emailList__list">
+      
+
+        </div>
+      </div>
+        <!-- Email List rows Ends -->
+        <div class="EmailView" style="display: none;">
+          <div class="emailList__settings">
+            <div class="emailList__settingsLeft">
+              <span class="material-icons" onclick="closetheEmailView()"> arrow_back </span>
+              <span class="material-icons" title="archive">
+                archive
+                </span>
+              <span class="material-icons" title="report spam"> report </span>
+              <span class="material-icons" title="delete"> delete </span>
+              <span class="material-icons" title="mark as unread">
+                markunread
+                </span>
+                <span class="material-icons" title="snooze">
+                  watch_later
+                  </span>
+                <span class="material-icons" title="labels">
+                  label
+                  </span>
+                  <span class="material-icons" title="more">
+                    more_vert
+                    </span>
+            </div>
+            <div class="emailList__settingsRight">
+              <span class="material-icons"> chevron_left </span>
+              <span class="material-icons"> chevron_right </span>
+            </div>
+          </div>
+          <div class="EmailMessageBox">
+            <div class="Emailleft">
+               <div class="Emailicon">
+              <img src="https://ssl.gstatic.com/ui/v1/icons/mail/profile_mask2.png" alt="">
+               </div>
+            </div>
+            <div class="EmailRight">
+                <div class="subject">
+                  <h3 id="getSubject">This is a Subject</h3>
+                </div>
+                <div class="from">
+                  <h4 id="getEmail">fazufaiez@gmail.com</h4>
+                  <p>To me</p>
+                </div>
+                <div class="message">
+                  <p id="body">
+                  Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eum odit deleniti iure atque quia labore, veniam neque vel sed excepturi optio architecto aliquam, quo quis laudantium cupiditate rem quam molestias!
+                  </p>
+                </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Email List Ends -->
+  
+     
+    </div>
+    <div class="sendMail" style="display: none;">
+      <div class="sendTopHeader">
+        <h5>New Message</h5>
+        <span id="close" class="material-icons" title="close"> clear </span>
+      </div>
+      <div class="messageBox">
+        <div style="width: 100%;">
+        
+          <input id="to" type="text" placeholder="To:" >
+        </div>
+        <div>
+       
+          <input id="sub" type="text" placeholder="subject" >
+        </div>
+        <div>
+          <textarea name="message" id="message" cols="30" rows="10" placeholder="Start writting here.."></textarea>
+        </div>
+      </div>
+      <div class="sendMailBtm">
+        <button class="btn" id="send" title="send">Send</button>
+        <span id="upload" class="material-icons" title="attach file"> attach_file </span>
+      </div>
+    </div>
+    <!-- Main Body Ends -->
+    <script src="./main.js"></script>
+  </body>
+</html>

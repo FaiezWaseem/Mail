@@ -1,0 +1,492 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: Roboto,RobotoDraft,Helvetica,Arial,sans-serif;
+}
+
+/* Header */
+.header__left img {
+  object-fit: contain;
+  height: 80px;
+  margin-left: 5px;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid whitesmoke;
+}
+
+.header__left {
+  display: flex;
+  align-items: center;
+}
+
+.header__left span {
+  padding: 10px;
+  cursor: pointer;
+}
+
+.header__middle {
+  display: flex;
+  flex: 0.7;
+  align-items: center;
+  background-color: whitesmoke;
+  padding: 0px 10px;
+  border-radius: 5px;
+}
+
+.material-icons {
+  color: gray;
+}
+ .emailList .material-icons:hover{
+  background-color: rgba(0, 0, 0, 0.24);
+  border-radius: 50%;
+  opacity: 1;
+  border : 1px solid #434343;
+
+}
+.header__middle input {
+  border: none;
+  width: 100%;
+  padding: 10px;
+  outline: none;
+  font-size: medium;
+  background-color: transparent;
+}
+
+.header__right {
+  display: flex;
+  padding-right: 20px;
+}
+
+.header__right span {
+  padding: 10px;
+  cursor: pointer;
+}
+
+
+/* Sidebar */
+.sidebar {
+  flex: 0.3;
+  max-width: 200px;
+  padding-right: 20px;
+}
+
+.sidebar__compose {
+  margin-top: 15px;
+  margin-left: 10px;
+  margin-bottom: 15px;
+  text-transform: capitalize;
+  color: gray;
+  padding: 15px;
+  border-radius: 30px;
+  background-color: white;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  outline: none;
+  border: none;
+  box-shadow: 0px 2px 5px -2px rgba(0, 0, 0, 0.75);
+}
+
+.sidebar__compose span {
+  margin-right: 5px;
+}
+
+.sidebarOption {
+  display: flex;
+  align-items: center;
+  height: 40px;
+  padding: 0 10px;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+  cursor: pointer;
+  color: #818181;
+}
+
+.sidebarOption .material-icons {
+  padding: 5px;
+}
+
+.sidebarOption h3 {
+  flex: 1;
+  margin-left: 10px;
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.sidebarOption:hover,
+.sidebarOption:hover h3,
+.sidebarOption:hover .material-icons,
+.sidebarOption__active,
+.sidebarOption__active h3,
+.sidebarOption__active .material-icons {
+  background-color: #fcecec;
+  color: #c04b37;
+  font-weight: 800;
+}
+
+.sidebar__footer {
+  display: flex;
+  justify-content: center;
+}
+
+.sidebar__footerIcons .material-icons {
+  margin: 7px;
+  cursor: pointer;
+}
+
+/* main body */
+.main__body {
+  display: flex;
+  height: 100vh;
+}
+
+body {
+  height: 100vh;
+  overflow-y: hidden;
+}
+
+/* email list */
+.emailList {
+  flex: 1;
+  overflow: scroll;
+}
+
+.emailList__settings {
+  position: sticky;
+  top: 0;
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid whitesmoke;
+  background-color: white;
+  z-index: 999;
+  padding: 8px;
+}
+
+.emailList__settingsLeft {
+  display: flex;
+  align-items: center;
+}
+
+.emailList__settings .material-icons {
+  margin: 5px;
+  cursor: pointer;
+}
+
+.section {
+  display: flex;
+  align-items: center;
+  border-bottom-width: 2px;
+  padding: 15px;
+  min-width: 200px;
+  cursor: pointer;
+  color: grey;
+  border-width: 0;
+}
+
+.emailList__sections {
+  position: sticky;
+  top: 0;
+  display: flex;
+  background-color: white;
+  border-bottom: 1px solid whitesmoke;
+  z-index: 999;
+}
+
+.section__selected {
+  background-color: whitesmoke;
+  border-width: 3px;
+  color: red;
+  border-bottom: 3px solid red;
+}
+
+.section__selected .material-icons {
+  color: red;
+}
+
+.section:hover {
+  background-color: whitesmoke;
+  border-width: 3px;
+}
+
+.section h4 {
+  font-size: 14px;
+  margin-left: 15px;
+}
+
+.emailRow__options {
+  display: flex;
+  align-items: center;
+}
+
+.emailRow__options .material-icons,
+input {
+  margin: 5px;
+}
+
+.emailRow {
+  display: flex;
+  align-items: center;
+  height: 50px;
+  border-bottom: 1px solid whitesmoke;
+  cursor: pointer;
+  z-index: 999;
+}
+
+.emailRow:hover {
+  border-top: 1px solid whitesmoke;
+  box-shadow: 0 4px 4px -2px rgba(0, 0, 0, 0.24);
+}
+
+.emailRow__message {
+  display: flex;
+  flex: 0.8;
+  align-items: center;
+  font-size: 13px;
+}
+
+.emailRow__message h4 {
+  width: 400px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+.emailRow__title {
+  font-size: 13px;
+  flex: 0.3;
+}
+
+.emailRow__time {
+  padding-right: 15px;
+  font-size: 10px;
+  font-weight: bold;
+}
+
+.emailRow__description {
+  font-weight: 400;
+  color: gray;
+}
+.sendMail{
+  position: absolute;
+  bottom: 30;
+  right: 20;
+  background-color: rgb(255, 255, 255);
+  width: 35vw;
+  border-radius: 1%;
+  font-family: Roboto,RobotoDraft,Helvetica,Arial,sans-serif;
+  background: rgba( 255, 255, 255 , 1);
+  -webkit-box-shadow:  1px  3px 8.5px 0px rgba(0,0,0, 0.5);
+box-shadow:  1px  3px 8.5px 0px rgba(0,0,0, 0.5);
+}
+.sendTopHeader{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 6px;
+  background-color: #404040;
+  color: #fff;
+  border-radius: 3% 0 3% 0;
+}
+#close:hover{
+background-color: rgba(0, 0, 0, 0.24);
+cursor: pointer;
+}
+.messageBox{
+  overflow: hidden;
+
+}
+.messageBox input[type=text] {
+  width: 100%;
+  padding: 10px 20px;
+  margin: 3px 0;
+  box-sizing: border-box;
+  border: none;
+  border-bottom: 1px solid #818181;
+  background-color: transparent;
+}
+
+.messageBox input[type=text]:focus , .messageBox textarea:focus {
+  outline: none;
+}
+.messageBox textarea {
+  width: 100%;
+  height: 150px;
+  padding: 12px 20px;
+  box-sizing: border-box;
+  border-radius: 4px;
+  background-color: transparent;
+  font-size: 16px;
+  resize: none;
+  outline: none;
+  border: none;
+  border-bottom: 1px solid #818181;
+}
+.btn{
+  background-color: dodgerblue;
+  color: #fff;
+  padding: 8px;
+  border: none;
+  border-radius: 4px;
+}
+.btn:hover{
+  color: dodgerblue;
+  background: transparent;
+  cursor: pointer;
+  border: 1px solid dodgerblue;
+  font-weight: 600;
+}
+.sendMailBtm{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 3px;
+}
+#upload:hover{
+  cursor: pointer;
+}
+/* ------- */
+.EmailMessageBox{
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.EmailMessageBox .Emailleft{
+display: grid;
+place-items: center;
+  width: 10%;
+}
+.EmailMessageBox .EmailRight{
+  width: 80%;
+}
+.from , .subject , .message{
+  margin-top: 20px;
+}
+
+.message p{
+  word-break: break-all;
+}
+.from p {
+  color: gray;
+  font-weight: lighter !important;
+}
+@media screen and (max-width: 768px) {
+  .sendMail{
+    width: 55vw;
+  }
+}
+@media screen and (max-width: 468px) {
+  .sidebar {
+    position: absolute;
+    background: #fff;
+    z-index: 9999;
+    width: 50vw;
+    height: 100vh;
+  }
+  .header__left img{
+    display: none;
+  }
+  .sendMail{
+    width: 65vw;
+  }
+}
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.container {
+  width: 992px;
+  margin: 0 auto;
+}
+
+.btn {
+  padding: 0.5rem 1rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  cursor: pointer;
+  outline: none;
+}
+
+.btn:active {
+  transform: scale(0.9);
+}
+
+.close-modal {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+}
+
+.modal {
+  width: 450px;
+  position: fixed;
+  top: -50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: top 0.3s ease-in-out;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  z-index: 100001;
+  background-color: #fff;
+}
+
+.modal.active {
+  top: 40%;
+}
+
+.modal .header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #ccc;
+  padding: 0.5rem;
+  background-color: rgba(0, 0, 0, 0.05);
+}
+
+.modal .body {
+  padding: 0.75rem;
+}
+
+#overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 100000;
+}
+
+#overlay.active {
+  display: block;
+}
+.modal input[type=number], select {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+.modal input[type=number]:hover {
+  background-color: #ccc;
+  outline: none;
+}
+#passsubmit{
+  padding: 8px;
+  width: 100%;
+}
+@media screen and (max-width: 468px) {
+.modal{
+  width: 260px;
+}
+
+}
